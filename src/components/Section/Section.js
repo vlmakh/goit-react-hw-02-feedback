@@ -10,7 +10,7 @@ export function Section({ title, children }) {
   );
 }
 
-Container.propTypes = {
+Section.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
 };
