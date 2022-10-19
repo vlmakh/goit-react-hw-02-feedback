@@ -31,12 +31,13 @@ class Feedback extends Component {
     return good + neutral + bad;
   };
 
-  countPositiveFeedbackPercentage = () => {};
+  countPositiveFeedbackPercentage = () => {
+    const { good, neutral, bad } = this.state;
+    return Math.round((good / (good + neutral + bad)) * 100);
+  };
 
   render() {
     const { good, neutral, bad } = this.state;
-    const total = good + neutral + bad;
-    const goodPercent = Math.round((good / total) * 100);
 
     return (
       <>
@@ -62,11 +63,11 @@ class Feedback extends Component {
           </li>
           <li>
             <Name>Total:</Name>
-            <State>{total}</State>
+            <State>{this.countTotalFeedback()}</State>
           </li>
           <li>
             <Name>Positive feedback:</Name>
-            <State>{goodPercent}%</State>
+            <State>{this.countPositiveFeedbackPercentage()}%</State>
           </li>
         </StatList>
       </>
