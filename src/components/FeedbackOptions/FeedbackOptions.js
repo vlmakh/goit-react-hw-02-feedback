@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptions.styled';
 
-export function FeedbackOptions({ addGood, addNeutral, addBad }) {
+export function FeedbackOptions({ options, addFeedback }) {
   return (
     <div>
-      <Button onClick={addGood}>Good</Button>
-      <Button onClick={addNeutral}>Neutral</Button>
-      <Button onClick={addBad}>Bad</Button>
+      {options.map(option => (
+        <Button onClick={() => addFeedback(option)} key={option}>
+          {option[0].toUpperCase() + option.slice(1)}
+        </Button>
+      ))}
     </div>
   );
 }
 
 FeedbackOptions.propTypes = {
-  addGood: PropTypes.func,
-  addNeutral: PropTypes.func,
-  addBad: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.string),
+  addFeedback: PropTypes.func,
 };
