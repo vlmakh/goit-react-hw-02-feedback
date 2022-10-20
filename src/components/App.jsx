@@ -42,6 +42,7 @@ class App extends Component {
   render() {
     const { good, neutral, bad } = this.state;
     const total = good + neutral + bad
+    
     return (
       <>
         <Section title="Please leave your feedback">
