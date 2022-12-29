@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptions.styled';
 
-export function FeedbackOptions({ options, addFeedback }) {
+export function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
     <div>
       {options.map(option => (
-        <Button onClick={() => addFeedback(option)} key={option}>
+        <Button onClick={() => onLeaveFeedback(option)} key={option}>
           {option[0].toUpperCase() + option.slice(1)}
         </Button>
       ))}
@@ -15,5 +15,5 @@ export function FeedbackOptions({ options, addFeedback }) {
 
 FeedbackOptions.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string),
-  addFeedback: PropTypes.func,
+  onLeaveFeedback: PropTypes.func,
 };

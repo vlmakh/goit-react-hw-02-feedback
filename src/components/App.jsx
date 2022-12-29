@@ -34,7 +34,7 @@ class App extends Component {
         <Section title="Please leave your feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
-            addFeedback={this.addFeedback}
+            onLeaveFeedback={this.addFeedback}
           />
         </Section>
 
