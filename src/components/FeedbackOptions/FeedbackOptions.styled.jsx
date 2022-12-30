@@ -7,6 +7,7 @@ export const Button = styled.button`
   font-size: 16px;
   font-weight: 600;
   border-radius: 4px;
+  text-transform: capitalize;
 
   :not(:last-child) {
     margin-right: 10px;

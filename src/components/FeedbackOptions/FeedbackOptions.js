@@ -6,7 +6,7 @@ export function FeedbackOptions({ options, onLeaveFeedback }) {
     <div>
       {options.map(option => (
         <Button onClick={() => onLeaveFeedback(option)} key={option}>
-          {option[0].toUpperCase() + option.slice(1)}
+          {option}
         </Button>
       ))}
     </div>
