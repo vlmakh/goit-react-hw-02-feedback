@@ -4,6 +4,12 @@ import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 
+// type StateType = {
+//     good: number,
+//     neutral: number,
+//     bad: number,
+//   }
+
 class App extends Component {
   state = {
     good: 0,
@@ -11,16 +17,16 @@ class App extends Component {
     bad: 0,
   };
 
-  addFeedback = (option: string) => {
+  addFeedback = (option: string):void => {
     this.setState((prevState: any) => ({ [option]: prevState[option] + 1 }));
   };
 
-  countTotalFeedback = () => {
+  countTotalFeedback = ():number => {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
   };
 
-  countPositiveFeedbackPercentage = () => {
+  countPositiveFeedbackPercentage = ():number => {
     const { good } = this.state;
     return Math.round((good / this.countTotalFeedback()) * 100);
   };

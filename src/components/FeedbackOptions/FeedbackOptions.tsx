@@ -10,7 +10,7 @@ export const FeedbackOptions:FC<FeedbackOptionsType> = ({ options, onLeaveFeedba
   return (
     <div>
       {options.map(option => (
-        <Button onClick={() => onLeaveFeedback(option)} key={option}>
+        <Button onClick={():void => onLeaveFeedback(option)} key={option}>
           {option}
         </Button>
       ))}
