@@ -1,7 +1,15 @@
-import PropTypes from 'prop-types';
 import { StatList, Name, State } from './Statistics.styled';
+import { FC } from 'react';
 
-export function Statistics({ good, neutral, bad, total, positivePercentage }) {
+type StatType = {
+  good: number,
+  neutral: number,
+  bad: number,
+  total: number,
+  positivePercentage: number,
+}
+
+export const Statistics:FC<StatType> = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <StatList>
       <li>
@@ -27,11 +35,3 @@ export function Statistics({ good, neutral, bad, total, positivePercentage }) {
     </StatList>
   );
 }
-
-Statistics.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number.isRequired,
-};

@@ -11,8 +11,8 @@ class App extends Component {
     bad: 0,
   };
 
-  addFeedback = option => {
-    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
+  addFeedback = (option: string) => {
+    this.setState((prevState: any) => ({ [option]: prevState[option] + 1 }));
   };
 
   countTotalFeedback = () => {
