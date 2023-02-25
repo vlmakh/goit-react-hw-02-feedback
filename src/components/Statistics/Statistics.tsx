@@ -2,14 +2,20 @@ import { StatList, Name, State } from './Statistics.styled';
 import { FC } from 'react';
 
 type StatType = {
-  good: number,
-  neutral: number,
-  bad: number,
-  total: number,
-  positivePercentage: number,
-}
+  good: number;
+  neutral: number;
+  bad: number;
+  total: number;
+  positivePercentage: number;
+};
 
-export const Statistics:FC<StatType> = ({ good, neutral, bad, total, positivePercentage }) => {
+export const Statistics: FC<StatType> = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => {
   return (
     <StatList>
       <li>
@@ -34,4 +40,4 @@ export const Statistics:FC<StatType> = ({ good, neutral, bad, total, positivePer
       </li>
     </StatList>
   );
-}
+};

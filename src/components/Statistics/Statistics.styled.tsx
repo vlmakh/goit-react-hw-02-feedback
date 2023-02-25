@@ -1,6 +1,5 @@
 import styled from '@emotion/styled';
 
-
 export const StatList = styled.ul`
   list-style: none;
   text-align: left;
@@ -9,15 +8,15 @@ export const StatList = styled.ul`
   padding: 0;
 
   li {
-    display: flex;    
+    display: flex;
     justify-content: space-between;
     align-items: baseline;
     gap: 8px;
   }
 
   li::before {
-    content: "";
-    height: 1px;    
+    content: '';
+    height: 1px;
     flex-grow: 1;
     background-color: #000;
   }
@@ -29,11 +28,10 @@ export const StatList = styled.ul`
 
 export const Name = styled.span`
   display: inline-block;
-  order: -1;  
+  order: -1;
 `;
 
 export const State = styled.span`
   display: inline-block;
-  font-weight: 700;  
+  font-weight: 700;
 `;
-
